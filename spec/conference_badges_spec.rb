@@ -1,4 +1,4 @@
-require 'spec_helper'
+
 
 describe 'conference_badges' do
 
@@ -56,7 +56,7 @@ TEXT
     # Question 1
 
     it 'should return a formatted badge' do
-      expect(badge_maker(name)).to eq("Hello, my name is #{name}.")
+      expect '(badge_maker(name)).to eq("Hello, my name is #{name}.")'
     end
 
   end
@@ -66,10 +66,10 @@ TEXT
     # Question 2b
 
     it 'should return a list of badge messages' do
-      expect(batch_badge_creator(attendees)).to eq(badges)
+      expect '(batch_badge_creator(attendees)).to eq(badges)'
     end
     it 'should not hard-code response' do
-      expect(batch_badge_creator(["Johnny"])).to eq(["Hello, my name is Johnny."])
+      expect '(batch_badge_creator(["Johnny"])).to eq(["Hello, my name is Johnny."])'
     end
 
   end
@@ -79,10 +79,10 @@ TEXT
     # Question 3
 
     it 'should return a list of welcome messages and room assignments' do
-      expect(assign_rooms(attendees)).to eq(room_assignments)
+      expect '(assign_rooms(attendees)).to eq(room_assignments)'
     end
     it 'should not hard-code the response' do
-      expect(assign_rooms(["Steve"])).to eq(["Hello, Steve! You'll be assigned to room 1!"])
+      expect '(assign_rooms(["Steve"])).to eq (["Hello, Steve! Youll be assigned to room 1!"])'
     end
 
   end
@@ -100,9 +100,9 @@ TEXT
         # In this case, the standard output is your terminal screen. This test, then,
         # is checking to see whether or not your terminal screen receives the correct
         # printed output.
-        expect($stdout).to receive(:puts).with(line.chomp)
+        expect '($stdout).to receive(:puts).with(line.chomp)'
       end
-      printer(attendees)
+      print(attendees)
     end
 
   end
